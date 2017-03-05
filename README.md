@@ -45,19 +45,19 @@ When a car enters my parking lot, I want to have a ticket issued to the driver. 
 
 The system should provide me with the ability to find out:
 
-a) Registration numbers of all cars of a particular colour.
-
-b) Slot number in which a car with a given registration number is parked.
-
-c) Slot numbers of all slots where a car of a particular colour is parked.
+- Registration numbers of all cars of a particular colour.
+- Slot number in which a car with a given registration number is parked.
+- Slot numbers of all slots where a car of a particular colour is parked.
 
 We interact with the system via a simple set of commands which produce a specific output. The system should allow input in two ways:
 
-1) It should provide us with an interactive command prompt based shell where commands can be typed in 
+- It should provide us with an interactive command prompt based shell where commands can be typed in 
+- It should accept a filename as a parameter at the command prompt and read the commands from that file 
 
-2) It should accept a filename as a parameter at the command prompt and read the commands from that file 
+### Requiremnts
 
 You have to solve the problem without any external libraries except for a testing lib for TDD. 
+
 Your solution must build+run on Linux. 
 
 ### License

@@ -33,6 +33,10 @@ The application is available via command line. Just run commands:
 
 ```php parking import /parking/tmp/import```
 
+### Sample
+
+![alt tag](https://github.com/rafaelqueiroz/parking/blob/master/sample_import.png)
+
 ### License
 
 The Parking Sample is available under an MIT License.

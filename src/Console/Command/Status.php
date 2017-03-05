@@ -19,10 +19,13 @@ class Status implements Command
 
         $columns = "|%5.5s |%-20.20s | %-10.10s |\n";
         $output = sprintf($columns, 'Slot No.', 'Registration No', 'Colour');
-        foreach ($parking->getSlots() as $key => $slot)
-        {
-            $plate  = $slot->getCar() ? $slot->getCar()->plate : '';
-            $colour = $slot->getCar() ? $slot->getCar()->colour : '';
+        foreach ($parking->getSlots() as $key => $slot) {
+            if (!$slot->getCar()) {
+                continue;
+            }
+
+            $plate  = $slot->getCar()->plate;
+            $colour = $slot->getCar()->colour;
 
             $output .= sprintf($columns, $key + 1, $plate, $colour);
         }

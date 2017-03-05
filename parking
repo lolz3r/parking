@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+require_once (__DIR__ . "/vendor/autoload.php");
+
+$path = __DIR__ . "/tmp/data";
+$repository = new \Parking\Infrastructure\Repository\ParkingRepository($path);
+
+$handler = new \Parking\Console\Handler($argv);
+$handler->addCommand(new \Parking\Console\Command\CreateParkingLot($repository));
+$handler->addCommand(new \Parking\Console\Command\Leave($repository));
+$handler->addCommand(new \Parking\Console\Command\Park($repository));
+$handler->addCommand(new \Parking\Console\Command\RegistrationNumbersForCarsWithColour($repository));
+$handler->addCommand(new \Parking\Console\Command\SlotNumbersForCarsWithColour($repository));
+$handler->addCommand(new \Parking\Console\Command\SlotNumberForRegistrationNumber($repository));
+$handler->addCommand(new \Parking\Console\Command\Status($repository));
+$handler->addCommand(new \Parking\Console\Command\Import($repository));
+
+$handler->dispatch();

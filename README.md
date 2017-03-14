@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/rafaelqueiroz/parking.svg?branch=master)](https://travis-ci.org/rafaelqueiroz/parking)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/rafaelqueiroz/parking/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/rafaelqueiroz/parking/?branch=master)
+
 ### Parking
 Parking Sample with PHP.
 
